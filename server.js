@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.PORT || 3001;
-const path = require('path');
 if (process.env.NODE_ENV.trim() === "development"){
     require('dotenv').config(); //grab local copy of env vars
 }
@@ -23,7 +22,6 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 //routes
-app.use(express.static(path.join(__dirname, "client")));
 app.use("/api", require('./routes/api/api.js'));
 
 // Start the API server
