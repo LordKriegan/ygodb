@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+
+db_builder/dbbuilder.json
+db_builder/dbbuildlog.txt
+db_builder/dbcardlist.json
